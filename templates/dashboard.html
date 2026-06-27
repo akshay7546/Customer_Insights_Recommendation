@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReadyNest Analytics Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>ReadyNest</h2>
+
+            <span>Analytics</span>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+
+                <a href="/">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/customers">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Customers
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/products">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    Products
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/sales">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Sales
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/recommendations">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    Recommendation
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/insights">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                    Business Insights
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Navbar -->
+
+        <div class="navbar">
+
+            <h1>Customer Insights & Recommendation Dashboard</h1>
+
+            <div class="profile">
+
+                <i class="fa-solid fa-user-circle"></i>
+
+            </div>
+
+        </div>
+
+        <!-- KPI Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>Total Customers</h3>
+
+                <h2>{{ total_customers }}</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                <h3>Total Revenue</h3>
+
+                <h2>₹ {{ "{:,.0f}".format(total_revenue) }}</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h3>Total Profit</h3>
+
+                <h2>₹ {{ "{:,.0f}".format(total_profit) }}</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3>Average Rating</h3>
+
+                <h2>{{ avg_rating }}</h2>
+
+            </div>
+
+        </div>
+
+        <!-- Placeholder -->
+
+        <div class="welcome-box">
+
+            <h2>Welcome to Customer Insights & Recommendation Analytics 🚀</h2>
+
+            <p>
+                Monitor customer behaviour, product performance,
+                sales trends, business insights and AI-powered
+                recommendations from one unified dashboard.
+
+            </p>
+
+        </div>
+    
+      <!-- Welcome Box End -->
+
+     <div class="section-title">
+
+      <h2>📊 Business Analytics</h2>
+
+     <p>
+
+        Real-time analytics generated from customer purchasing behaviour.
+
+     </p>
+
+</div>
+        
+<!-- ================= Analytics Section ================= -->
+
+    <div class="analytics-grid">
+
+    <!-- Revenue Analytics -->
+
+    <div class="analytics-card">
+
+        <h2>Revenue by Country</h2>
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            <th>Country</th>
+
+            <th>Revenue</th>
+
+        </tr>
+
+      </thead>
+
+     <tbody>
+
+        {% for row in country_sales %}
+
+        <tr>
+
+            <td>{{ row.Country }}</td>
+
+            <td>₹ {{ "{:,.0f}".format(row.Revenue) }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+    </div>
+
+    <!-- Customer Segments -->
+
+    <div class="analytics-card">
+
+        <h2>Customer Segments</h2>
+
+        <table>
+
+    <thead>
+
+        <tr>
+
+            <th>Segment</th>
+
+            <th>Customers</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        {% for row in customer_segments %}
+
+        <tr>
+
+            <td>{{ row.Segment }}</td>
+
+            <td>{{ row.Customers }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+    </div>
+
+</div>
+
+<!-- ================= Second Row ================= -->
+
+<div class="analytics-grid">
+
+    <!-- Top Products -->
+
+    <div class="analytics-card">
+
+        <h2>Top Revenue Products</h2>
+
+        <table>
+
+    <thead>
+
+        <tr>
+
+            <th>Product</th>
+
+            <th>Revenue</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        {% for row in top_products %}
+
+        <tr>
+
+            <td>{{ row.Product_Name }}</td>
+
+            <td>₹ {{ "{:,.0f}".format(row.Revenue) }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+    </div>
+
+    <!-- Shopping Behaviour -->
+
+    <div class="analytics-card">
+
+        <h2>Shopping Behaviour</h2>
+
+        <table>
+
+    <thead>
+
+        <tr>
+
+            <th>Shopping Time</th>
+
+            <th>Customers</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        {% for row in shopping_period %}
+
+        <tr>
+
+            <td>{{ row.Shopping_Time }}</td>
+
+            <td>{{ row.Customers }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- ================= Recent Orders ================= -->
+
+<div class="section-title">
+
+    <h2>📦 Recent Orders</h2>
+
+    <p>Latest customer orders from the platform.</p>
+
+</div>
+
+<div class="analytics-card">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Customer ID</th>
+
+                <th>Product</th>
+
+                <th>Country</th>
+
+                <th>Revenue</th>
+
+                <th>Rating</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for row in recent_orders %}
+
+            <tr>
+
+                <td>{{ row.Customer_ID }}</td>
+
+                <td>{{ row.Product_Name }}</td>
+
+                <td>{{ row.Country }}</td>
+
+                <td>₹ {{ "{:,.0f}".format(row.Revenue) }}</td>
+
+                <td>{{ row.Rating }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<div class="analytics-grid">
+
+    <div class="analytics-card">
+
+        <h2>⭐ Top Rated Products</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Product</th>
+
+                    <th>Rating</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for row in top_rated_products %}
+
+                <tr>
+
+                    <td>{{ row.Product_Name }}</td>
+
+                    <td>{{ "%.2f"|format(row.Rating) }}</td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</main>
+
+</div>
+
+</body>
+
+</html>

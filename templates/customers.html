@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customers | ReadyNest Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>ReadyNest</h2>
+            <span>Analytics</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="/customers">
+                    <i class="fa-solid fa-users"></i>
+                    Customers
+                </a>
+            </li>
+
+            <li>
+                <a href="/products">
+                    <i class="fa-solid fa-box"></i>
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="/sales">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Sales
+                </a>
+            </li>
+
+            <li>
+                <a href="/recommendations">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Recommendation
+                </a>
+            </li>
+
+            <li>
+                <a href="/insights">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    Business Insights
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <div class="navbar">
+
+            <h1>Customer Analytics</h1>
+
+            <div class="profile">
+                <i class="fa-solid fa-user-circle"></i>
+            </div>
+
+        </div>
+
+        <!-- KPI Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>Total Customers</h3>
+
+                <h2>200000</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-check"></i>
+
+                <h3>Active Customers</h3>
+
+                <h2>158250</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-crown"></i>
+
+                <h3>Platinum Customers</h3>
+
+                <h2>41875</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3>Average Rating</h3>
+
+                <h2>3.00</h2>
+
+            </div>
+
+        </div>
+
+        <!-- Section -->
+
+        <div class="section-title">
+
+            <h2>👥 Customer Analytics</h2>
+
+            <p>Customer demographics and business statistics.</p>
+
+        </div>
+
+        <div class="analytics-grid">
+
+            <div class="analytics-card">
+
+                <h2>Gender Distribution</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Gender</th>
+
+                            <th>Customers</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Male</td>
+                            <td>99,997</td>
+                        </tr>
+
+                        <tr>
+                            <td>Female</td>
+                            <td>100,003</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="analytics-card">
+
+                <h2>Customer Segments</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Segment</th>
+
+                            <th>Customers</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Gold</td>
+                            <td>79,122</td>
+                        </tr>
+
+                        <tr>
+                            <td>Silver</td>
+                            <td>79,003</td>
+                        </tr>
+
+                        <tr>
+                            <td>Platinum</td>
+                            <td>41,875</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Customer Table -->
+
+        <div class="section-title">
+
+            <h2>📋 Customer Records</h2>
+
+            <p>Latest customer information.</p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Customer ID</th>
+
+                        <th>Country</th>
+
+                        <th>Gender</th>
+
+                        <th>Segment</th>
+
+                        <th>Revenue</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>100001</td>
+
+                        <td>India</td>
+
+                        <td>Male</td>
+
+                        <td>Gold</td>
+
+                        <td>₹ 1,25,000</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>100002</td>
+
+                        <td>Canada</td>
+
+                        <td>Female</td>
+
+                        <td>Silver</td>
+
+                        <td>₹ 98,000</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>100003</td>
+
+                        <td>UK</td>
+
+                        <td>Male</td>
+
+                        <td>Platinum</td>
+
+                        <td>₹ 2,65,000</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

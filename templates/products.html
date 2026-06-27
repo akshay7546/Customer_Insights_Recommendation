@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | Analytics</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>ReadyNest</h2>
+
+            <span>Analytics</span>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="/customers">
+                    <i class="fa-solid fa-users"></i>
+                    Customers
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="/products">
+                    <i class="fa-solid fa-box"></i>
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="/sales">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Sales
+                </a>
+            </li>
+
+            <li>
+                <a href="/recommendations">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Recommendation
+                </a>
+            </li>
+
+            <li>
+                <a href="/insights">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    Business Insights
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Navbar -->
+
+        <div class="navbar">
+
+            <h1>📦 Product Analytics</h1>
+
+            <div class="profile">
+
+                <i class="fa-solid fa-user-circle"></i>
+
+            </div>
+
+        </div>
+
+        <!-- KPI Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-box"></i>
+
+                <h3>Total Products</h3>
+
+                <h2>20</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <h3>Categories</h3>
+
+                <h2>10</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>Top Selling</h3>
+
+                <h2>Toy Car</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3>Average Rating</h3>
+
+                <h2>3.00</h2>
+
+            </div>
+
+        </div>
+
+        <!-- Welcome -->
+
+        <div class="welcome-box">
+
+            <h2>📦 Product Performance Dashboard</h2>
+
+            <p>
+
+                This page provides complete product analytics including
+                product performance, revenue analysis, category insights,
+                ratings and best-selling products.
+
+            </p>
+
+        </div>
+
+        <!-- Section -->
+
+        <div class="section-title">
+
+            <h2>📊 Product Analytics</h2>
+
+            <p>Top performing products based on sales and revenue.</p>
+
+        </div>
+
+        <!-- Analytics -->
+
+        <div class="analytics-grid">
+
+            <!-- Top Selling -->
+
+            <div class="analytics-card">
+
+                <h2>Top Selling Products</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Product</th>
+
+                            <th>Units Sold</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr><td>Toy Car</td><td>30,695</td></tr>
+                        <tr><td>Protein Powder</td><td>30,549</td></tr>
+                        <tr><td>Backpack</td><td>30,389</td></tr>
+                        <tr><td>Football</td><td>30,257</td></tr>
+                        <tr><td>Laptop</td><td>30,219</td></tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- Top Revenue -->
+
+            <div class="analytics-card">
+
+                <h2>Top Revenue Products</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Product</th>
+
+                            <th>Revenue</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr><td>Toy Car</td><td>₹1.23B</td></tr>
+                        <tr><td>Protein Powder</td><td>₹1.21B</td></tr>
+                        <tr><td>Football</td><td>₹1.21B</td></tr>
+                        <tr><td>Mouse</td><td>₹1.21B</td></tr>
+                        <tr><td>Backpack</td><td>₹1.20B</td></tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Product Table -->
+
+        <div class="section-title">
+
+            <h2>📋 Product List</h2>
+
+            <p>Popular products available in ReadyNest.</p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Product</th>
+
+                        <th>Category</th>
+
+                        <th>Revenue</th>
+
+                        <th>Rating</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Toy Car</td>
+                        <td>Toys</td>
+                        <td>₹1.23B</td>
+                        <td>4.8</td>
+                    </tr>
+
+                    <tr>
+                        <td>Laptop</td>
+                        <td>Electronics</td>
+                        <td>₹1.18B</td>
+                        <td>4.7</td>
+                    </tr>
+
+                    <tr>
+                        <td>Football</td>
+                        <td>Sports</td>
+                        <td>₹1.21B</td>
+                        <td>4.9</td>
+                    </tr>
+
+                    <tr>
+                        <td>Protein Powder</td>
+                        <td>Health</td>
+                        <td>₹1.21B</td>
+                        <td>4.6</td>
+                    </tr>
+
+                    <tr>
+                        <td>Backpack</td>
+                        <td>Fashion</td>
+                        <td>₹1.20B</td>
+                        <td>4.5</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

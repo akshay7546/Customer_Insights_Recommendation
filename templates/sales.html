@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sales | Analytics</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>ReadyNest</h2>
+
+            <span>Analytics</span>
+
+        </div>
+
+        <ul>
+
+            <li>
+
+                <a href="/">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/customers">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Customers
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/products">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    Products
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="/sales">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Sales
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/recommendations">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    Recommendation
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/insights">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                    Business Insights
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Navbar -->
+
+        <div class="navbar">
+
+            <h1>📈 Sales Analytics</h1>
+
+            <div class="profile">
+
+                <i class="fa-solid fa-user-circle"></i>
+
+            </div>
+
+        </div>
+
+        <!-- KPI Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                <h3>Total Revenue</h3>
+
+                <h2>₹23.98B</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h3>Total Profit</h3>
+
+                <h2>₹5.15B</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <h3>Total Orders</h3>
+
+                <h2>200000</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h3>Avg Order Value</h3>
+
+                <h2>₹119,936</h2>
+
+            </div>
+
+        </div>
+
+        <!-- Welcome -->
+
+        <div class="welcome-box">
+
+            <h2>📈 Sales Performance Dashboard</h2>
+
+            <p>
+
+                Monitor revenue, profit, orders, country-wise sales,
+                category-wise performance and business growth.
+
+            </p>
+
+        </div>
+
+        <!-- Analytics -->
+
+        <div class="section-title">
+
+            <h2>📊 Sales Overview</h2>
+
+            <p>Revenue and Profit generated from ReadyNest platform.</p>
+
+        </div>
+
+        <div class="analytics-grid">
+
+            <div class="analytics-card">
+
+                <h2>Revenue by Country</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Country</th>
+
+                            <th>Revenue</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr><td>Canada</td><td>₹3.05B</td></tr>
+                        <tr><td>UK</td><td>₹3.01B</td></tr>
+                        <tr><td>Australia</td><td>₹2.99B</td></tr>
+                        <tr><td>India</td><td>₹2.99B</td></tr>
+                        <tr><td>USA</td><td>₹2.96B</td></tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="analytics-card">
+
+                <h2>Profit by Category</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Category</th>
+
+                            <th>Profit</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr><td>Automotive</td><td>₹523M</td></tr>
+                        <tr><td>Books</td><td>₹521M</td></tr>
+                        <tr><td>Beauty</td><td>₹521M</td></tr>
+                        <tr><td>Toys</td><td>₹516M</td></tr>
+                        <tr><td>Sports</td><td>₹515M</td></tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Sales Summary -->
+
+        <div class="section-title">
+
+            <h2>📋 Sales Summary</h2>
+
+            <p>Current business performance snapshot.</p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Metric</th>
+
+                        <th>Value</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr><td>Total Revenue</td><td>₹23.98 Billion</td></tr>
+                    <tr><td>Total Profit</td><td>₹5.15 Billion</td></tr>
+                    <tr><td>Total Orders</td><td>200000</td></tr>
+                    <tr><td>Average Rating</td><td>3.00</td></tr>
+                    <tr><td>Highest Revenue Country</td><td>Canada</td></tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
